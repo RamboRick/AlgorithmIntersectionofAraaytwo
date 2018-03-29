@@ -1,17 +1,17 @@
 package leetcode349;
-import java.util.TreeSet;
+import java.util.HashSet;
 //349. Intersection of Two Arrays
 //时间复杂度: O(nlogn)
 //空间复杂度: O(n)
 public class Solution {
 	public int[] intersection(int[] nums1, int[] nums2){
 		
-		TreeSet<Integer> arr = new TreeSet<Integer>();
+		HashSet<Integer> arr = new HashSet<Integer>();
 		for(int num:nums1){
 			arr.add(num);
 		}
 		
-		TreeSet<Integer> resultSet = new TreeSet<Integer>();
+		HashSet<Integer> resultSet = new HashSet<Integer>();
 		for(int num:nums2){
 			if( arr.contains(num)){
 				resultSet.add(num);
